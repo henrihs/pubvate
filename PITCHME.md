@@ -33,12 +33,10 @@ GrowthChart-Server
 ## [Kestrel](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/kestrel?tabs=aspnetcore2x)
 
 - ASP.NET Core web server
-	- Self-host 
-
-![](./kestrel-to-internet2.png)
-	- or behind _reverse proxy_
-
-![](./kestrel-to-internet.png)
+	- Self-host\
+	![](./kestrel-to-internet2.png)
+	- or behind _reverse proxy_\
+	![](./kestrel-to-internet.png)
 +++
 
 ##### Simple setup:
