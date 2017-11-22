@@ -16,7 +16,7 @@ GrowthChart-Server
 
 - Data stored as EHR archetypes
 - AQL queries &rarr; Domain objects
-	- E.g. "Give me all height registrations for patient x"
+  - E.g. "Give me all height registrations for patient x"
 - _**Microservice**_ architecture
 
 
@@ -55,32 +55,23 @@ dotnet new webapi
 
 ---
 
-##### Simple code:
-```C#
-public static void Main(string[] args)
-{
-    BuildWebHost(args).Run();
-}
-
-public static IWebHost BuildWebHost(string[] args) =>
-    WebHost.CreateDefaultBuilder(args)
-        .UseStartup<Startup>()
-        .UseKestrel(options =>
-        {
-            options.Listen(IPAddress.Loopback, 5000);
-            options.Listen(IPAddress.Loopback, 5001, listenOptions =>
-            {
-                listenOptions.UseHttps("testCert.pfx", "testPassword");
-            });
-        })
-        .Build();
-```
-
----
-
 #### Simple IIS:
 - In your project:
-`nuget Microsoft.AspNetCore.Server.IISIntegration`
 
-- On the IIS host
-Install the ASP.NET Core Module ([ANCM](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/aspnet-core-module?tabs=aspnetcore2x))
+  Add a the IIS integration package,  (already included in metapackage `Microsoft.AspNetCore`)
+
+  ```
+  dotnet add package Microsoft.AspNetCore.Server.IISIntegration
+  ```
+
+- On the IIS host:
+  Install the ASP.NET Core Module ([ANCM](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/servers/aspnet-core-module?tabs=aspnetcore2x))
+
+  ```
+  choco install dotnetcore-windowshosting
+  ```
+
+  ​
+
+  ​
+
