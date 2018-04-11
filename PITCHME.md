@@ -57,7 +57,7 @@ https://github.com/seesharper/LightInject.xUnit
 #### Lessons learned
 DO Use factory methods to 
 - speed things up 
-- avoid property injection
+- avoid property injection [[1]](https://dipsasa.slack.com/archives/C4FT88CEQ/p1519722273000258)
 
 ---
 
